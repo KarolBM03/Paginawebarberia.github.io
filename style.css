@@ -1,0 +1,345 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: url("img/fondo-barberia.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #f5f5f5;
+  line-height: 1.6;
+  position: relative;
+  z-index: 0;
+}
+
+/* Fondo opaco encima de la foto */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Opacidad del fondo */
+  z-index: -1;
+}
+
+/* Títulos resaltados */
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2.4em;
+  color: #f9f8f6fb;
+  background: rgba(255, 255, 255, 0.1); /* cuadro semitransparente */
+  padding: 15px 25px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Secciones */
+section {
+  padding: 60px 20px;
+}
+
+/* Header */
+header {
+  background: rgba(15, 15, 15, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header .logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #c5a880;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-left: 25px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  background: #c5a880;
+  color: #0d0d0d;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Hero */
+#hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+#hero h1 {
+  font-size: 3em;
+}
+#hero p {
+  margin: 10px 0 20px;
+  font-size: 1.3em;
+}
+.btn {
+  background: #8b0000;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #c5a880;
+  color: #0d0d0d;
+}
+
+/* Sobre Nosotros */
+#sobre {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1em;
+}
+
+/* Servicios */
+#servicios .cards {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin: 40px;
+}
+.card {
+  background: #fff;
+  color: #111;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card h3 {
+  margin-bottom: 10px;
+  color: #8b0000;
+}
+.card p {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+.precio {
+  font-weight: bold;
+  color: #c5a880;
+}
+
+/* Galería */
+#galeria .grid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+.foto {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.foto:hover {
+  transform: scale(1.03);
+}
+.foto img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+.lightbox-contenido {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+.lightbox .cerrar {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.lightbox .cerrar:hover {
+  color: #c5a880;
+}
+
+/* Testimonios */
+#testimonios .testimonios-grid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+#testimonios blockquote {
+  background: #fff;
+  color: #111;
+  padding: 20px;
+  border-left: 5px solid #c5a880;
+  border-radius: 8px;
+  font-style: italic;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+#testimonios span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #8b0000;
+}
+
+/* Contacto */
+#contacto {
+  text-align: center;
+  background: rgba(31, 31, 31, 0.9);
+}
+.contacto-texto {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #ddd;
+}
+#form-contacto {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+#form-contacto input,
+#form-contacto textarea {
+  margin: 10px 0;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+}
+#form-contacto textarea {
+  min-height: 120px;
+  resize: none;
+}
+#form-contacto button {
+  background: #8b0000;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#form-contacto button:hover {
+  background: #c5a880;
+  color: #0d0d0d;
+}
+.horarios {
+  margin-top: 30px;
+  font-size: 1.1em;
+  color: #eee;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* WhatsApp flotante */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 60px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s, background 0.3s;
+}
+.whatsapp-float:hover {
+  background-color: #20b954;
+  transform: scale(1.1);
+}
+.whatsapp-float i {
+  font-size: 32px;
+}

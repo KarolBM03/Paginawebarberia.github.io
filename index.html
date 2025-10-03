@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbería Elegante</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">💈 Barbería Elegante</div>
+      <nav id="menu">
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#sobre">Sobre Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+      <h1>Estilo que habla por ti</h1>
+      <p>“Expertos en cortes, barbas y estilo masculino desde 1999.”</p>
+      <a href="#contacto" class="btn">Reserva tu cita</a>
+    </section>
+
+    <!-- Sobre nosotros -->
+    <section id="sobre">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        En <strong>Barbería Elegante</strong> combinamos tradición y modernidad
+        para ofrecerte cortes de cabello y arreglos de barba con un estilo
+        único. Nuestro equipo de barberos profesionales se dedica a resaltar tu
+        personalidad con cada detalle.
+      </p>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+      <h2>Nuestros Servicios</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>✂️ Corte Clásico</h3>
+          <p>Un corte tradicional adaptado a tu estilo personal.</p>
+          <span class="precio">$15</span>
+        </div>
+        <div class="card">
+          <h3>🧔 Arreglo de Barba</h3>
+          <p>Definición, recorte y acabado con productos premium.</p>
+          <span class="precio">$10</span>
+        </div>
+        <div class="card">
+          <h3>💆 Tratamiento Capilar</h3>
+          <p>Revitaliza tu cabello con técnicas profesionales.</p>
+          <span class="precio">$20</span>
+        </div>
+        <div class="card">
+          <h3>🔥 Diseño de Cejas</h3>
+          <p>Definición precisa para resaltar tu mirada.</p>
+          <span class="precio">$8</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria">
+      <h2>Galería de Estilos</h2>
+      <div class="grid">
+        <div class="foto"><img src="img/corte1.jpg" alt="Corte 1" /></div>
+        <div class="foto"><img src="img/corte2.jpg" alt="Corte 2" /></div>
+        <div class="foto"><img src="img/corte3.jpg" alt="Corte 3" /></div>
+        <div class="foto"><img src="img/corte4.jpg" alt="Corte 4" /></div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="cerrar">&times;</span>
+      <img class="lightbox-contenido" id="img-ampliada" />
+    </div>
+
+    <!-- Testimonios -->
+    <section id="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="testimonios-grid">
+        <blockquote>
+          “El mejor corte que me he hecho en años. Ambiente excelente.”
+          <span>- Carlos M.</span>
+        </blockquote>
+        <blockquote>
+          “Profesionales y atentos. Mi barba nunca estuvo tan bien cuidada.”
+          <span>- Juan P.</span>
+        </blockquote>
+        <blockquote>
+          “Ambiente elegante, atención rápida y de calidad. Recomendado.”
+          <span>- Andrés G.</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <p class="contacto-texto">
+        Agenda tu cita o consulta cualquier duda. Te responderemos lo antes
+        posible.
+      </p>
+
+      <form id="form-contacto">
+        <input type="text" id="nombre" placeholder="Tu nombre" required />
+        <input type="email" id="email" placeholder="Tu correo" required />
+        <input type="tel" id="telefono" placeholder="Tu teléfono (opcional)" />
+        <textarea
+          id="mensaje"
+          placeholder="Escribe tu mensaje..."
+          required
+        ></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+
+      <div class="horarios">
+        <h3>Horarios de Atención</h3>
+        <p>Lunes a Viernes: 9:00 am - 8:00 pm</p>
+        <p>Sábados: 9:00 am - 6:00 pm</p>
+        <p>Domingos y festivos: Cerrado</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Barbería Elegante - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a
+      href="https://wa.me/573001234567?text=Hola%20quiero%20agendar%20una%20cita"
+      class="whatsapp-float"
+      target="_blank"
+      title="Chatea con nosotros"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
