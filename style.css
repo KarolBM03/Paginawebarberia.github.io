@@ -6,27 +6,13 @@
 }
 body {
   font-family: "Segoe UI", sans-serif;
-  background: url("img/fondo-barberia.jpg") no-repeat center center fixed;
+  background: url("img/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #f5f5f5;
   line-height: 1.6;
   position: relative;
   z-index: 0;
-}
-
-/* Fondo opaco encima de la foto */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Opacidad del fondo */
-  z-index: -1;
-}
-
-/* Títulos resaltados */
+} /* Títulos resaltados */
 h1,
 h2 {
   text-align: center;
@@ -38,14 +24,10 @@ h2 {
   border-radius: 12px;
   display: inline-block;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Secciones */
+} /* Secciones */
 section {
   padding: 60px 20px;
-}
-
-/* Header */
+} /* Header */
 header {
   background: rgba(15, 15, 15, 0.95);
   display: flex;
@@ -59,7 +41,7 @@ header {
 header .logo {
   font-size: 1.6em;
   font-weight: bold;
-  color: #c5a880;
+  color: #e31d1d;
 }
 nav ul {
   display: flex;
@@ -77,11 +59,9 @@ nav ul li a {
   transition: 0.3s;
 }
 nav ul li a:hover {
-  background: #c5a880;
+  background: #da1b1b;
   color: #0d0d0d;
-}
-
-/* Botón hamburguesa */
+} /* Botón hamburguesa */
 .menu-toggle {
   display: none;
   font-size: 2em;
@@ -108,9 +88,7 @@ nav ul li a:hover {
   .menu-toggle {
     display: block;
   }
-}
-
-/* Hero */
+} /* Hero */
 #hero {
   height: 90vh;
   display: flex;
@@ -138,17 +116,13 @@ nav ul li a:hover {
 .btn:hover {
   background: #c5a880;
   color: #0d0d0d;
-}
-
-/* Sobre Nosotros */
+} /* Sobre Nosotros */
 #sobre {
   text-align: center;
   max-width: 800px;
   margin: auto;
   font-size: 1.1em;
-}
-
-/* Servicios */
+} /* Servicios */
 #servicios .cards {
   text-align: center;
   display: grid;
@@ -179,9 +153,7 @@ nav ul li a:hover {
 .precio {
   font-weight: bold;
   color: #c5a880;
-}
-
-/* Galería */
+} /* Galería */
 #galeria .grid {
   text-align: center;
   display: grid;
@@ -204,9 +176,7 @@ nav ul li a:hover {
   border-radius: 8px;
   cursor: pointer;
   display: block;
-}
-
-/* Lightbox */
+} /* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -236,9 +206,7 @@ nav ul li a:hover {
 }
 .lightbox .cerrar:hover {
   color: #c5a880;
-}
-
-/* Testimonios */
+} /* Testimonios */
 #testimonios .testimonios-grid {
   text-align: center;
   display: grid;
@@ -260,9 +228,7 @@ nav ul li a:hover {
   margin-top: 10px;
   font-weight: bold;
   color: #8b0000;
-}
-
-/* Contacto */
+} /* Contacto */
 #contacto {
   text-align: center;
   background: rgba(31, 31, 31, 0.9);
@@ -310,15 +276,6 @@ nav ul li a:hover {
   font-size: 1.1em;
   color: #eee;
 }
-
-/* Footer */
-footer {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9em;
-}
-
 /* WhatsApp flotante */
 .whatsapp-float {
   position: fixed;
@@ -342,4 +299,143 @@ footer {
 }
 .whatsapp-float i {
   font-size: 32px;
+}
+/* ===== FOOTER MODERNO ===== */
+footer {
+  background: linear-gradient(135deg, #0d1117, #121826);
+  color: #d9e3f0;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-logo i {
+  font-size: 2.2em;
+  color: #e50914; /* Rojo barbería */
+}
+
+.footer-logo h2 {
+  font-size: 1.8em;
+  color: #e50914;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer-text {
+  margin: 15px 0 30px;
+  font-size: 1.1em;
+  color: #a9b3c1;
+  line-height: 1.6;
+}
+
+/* Redes Sociales */
+.footer-social {
+  margin-bottom: 25px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin: 0 8px;
+  border: 1.5px solid #e50914;
+  border-radius: 50%;
+  color: #e50914;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #e50914;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* Línea divisoria */
+footer hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 30px auto;
+  width: 80%;
+}
+
+/* Texto final */
+.footer-copy {
+  font-size: 0.9em;
+  color: #7f8a9a;
+}
+
+/* ===== EFECTO FANTASMA (scroll reveal) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== BOTÓN SUBIR ARRIBA ====== */
+#btn-subir {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+#btn-subir.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#btn-subir:hover {
+  background: #b20710;
+  transform: translateY(-5px);
+}
+
+/* ====== MAPA ====== */
+#ubicacion {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#ubicacion h2 {
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.mapa-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
 }

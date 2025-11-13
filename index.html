@@ -35,7 +35,7 @@
     </section>
 
     <!-- Sobre nosotros -->
-    <section id="sobre">
+    <section id="sobre" class="reveal">
       <h2>Sobre Nosotros</h2>
       <p>
         En <strong>Barbería Elegante</strong> combinamos tradición y modernidad
@@ -46,34 +46,34 @@
     </section>
 
     <!-- Servicios -->
-    <section id="servicios">
+    <section id="servicios" class="reveal">
       <h2>Nuestros Servicios</h2>
       <div class="cards">
         <div class="card">
-          <h3>✂️ Corte Clásico</h3>
+          <h3>Corte Clásico</h3>
           <p>Un corte tradicional adaptado a tu estilo personal.</p>
-          <span class="precio">$15</span>
+          <span class="precio">RD$ 500</span>
         </div>
         <div class="card">
-          <h3>🧔 Arreglo de Barba</h3>
+          <h3>Arreglo de Barba</h3>
           <p>Definición, recorte y acabado con productos premium.</p>
-          <span class="precio">$10</span>
+          <span class="precio">RD$ 300</span>
         </div>
         <div class="card">
-          <h3>💆 Tratamiento Capilar</h3>
+          <h3>Tratamiento Capilar</h3>
           <p>Revitaliza tu cabello con técnicas profesionales.</p>
-          <span class="precio">$20</span>
+          <span class="precio">RD$ 750</span>
         </div>
         <div class="card">
-          <h3>🔥 Diseño de Cejas</h3>
+          <h3>Diseño de Cejas</h3>
           <p>Definición precisa para resaltar tu mirada.</p>
-          <span class="precio">$8</span>
+          <span class="precio">RD$ 100</span>
         </div>
       </div>
     </section>
 
     <!-- Galería -->
-    <section id="galeria">
+    <section id="galeria" class="reveal">
       <h2>Galería de Estilos</h2>
       <div class="grid">
         <div class="foto"><img src="img/corte1.jpg" alt="Corte 1" /></div>
@@ -90,7 +90,7 @@
     </div>
 
     <!-- Testimonios -->
-    <section id="testimonios">
+    <section id="testimonios" class="reveal">
       <h2>Lo que dicen nuestros clientes</h2>
       <div class="testimonios-grid">
         <blockquote>
@@ -109,7 +109,7 @@
     </section>
 
     <!-- Contacto -->
-    <section id="contacto">
+    <section id="contacto" class="reveal">
       <h2>Contáctanos</h2>
       <p class="contacto-texto">
         Agenda tu cita o consulta cualquier duda. Te responderemos lo antes
@@ -136,21 +136,69 @@
       </div>
     </section>
 
+    <!-- Ubicación -->
+    <section id="ubicacion" class="reveal">
+      <h2>Encuéntranos</h2>
+      <div class="mapa-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.3407!2d-69.3038!3d18.4553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf88f1b6!2sSan%20Pedro%20de%20Macor%C3%ADs!5e0!3m2!1ses!2sdo!4v1700000000"
+          width="100%"
+          height="300"
+          style="border: 0; border-radius: 10px"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Botón subir arriba -->
+    <button id="btn-subir" title="Volver arriba">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <!-- Footer -->
     <footer>
-      <p>© 2025 Barbería Elegante - Todos los derechos reservados</p>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <i class="fas fa-cut"></i>
+          <h2>BARBERÍA ELEGANTE</h2>
+        </div>
+
+        <p class="footer-text">
+          Cuidamos tu estilo con precisión y elegancia.<br />
+          ¡Conéctate con nosotros y luce siempre impecable!
+        </p>
+
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://wa.me/18090000000" target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a href="https://tiktok.com" target="_blank"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+        </div>
+
+        <hr />
+        <p class="footer-copy">
+          © 2025 Barbería Elegante. Todos los derechos reservados.
+        </p>
+      </div>
     </footer>
 
-    <!-- Botón flotante WhatsApp -->
-    <a
-      href="https://wa.me/573001234567?text=Hola%20quiero%20agendar%20una%20cita"
-      class="whatsapp-float"
-      target="_blank"
-      title="Chatea con nosotros"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("_ahx23zob7VSnYyLk"); // Tu User ID (Public Key)
+      })();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

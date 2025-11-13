@@ -43,3 +43,49 @@ document
 document.querySelector(".menu-toggle").addEventListener("click", function () {
   document.querySelector("nav ul").classList.toggle("show");
 });
+
+// ==== EFECTO FANTASMA AL HACER SCROLL ====
+function revealElements() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  reveals.forEach((element) => {
+    const windowHeight = window.innerHeight;
+    const revealTop = element.getBoundingClientRect().top;
+    const revealPoint = 120; // Cuánto antes aparece
+
+    if (revealTop < windowHeight - revealPoint) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active"); // opcional si quieres que desaparezcan al subir
+    }
+  });
+}
+
+window.addEventListener("scroll", revealElements);
+
+// Llamada inicial al cargar
+revealElements();
+
+// Enviar formulario con EmailJS
+document
+  .getElementById("form-contacto")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_tyosrlg", // 🔹 Tu Service ID
+        "template_eagj2eb", // 🔹 Tu Template ID
+        this,
+        "_ahx23zob7VSnYyLk" // 🔹 Tu User ID (Public Key)
+      )
+      .then(
+        function () {
+          alert("✅ ¡Mensaje enviado con éxito!");
+          document.getElementById("form-contacto").reset();
+        },
+        function (error) {
+          alert("❌ Ocurrió un error: " + JSON.stringify(error));
+        }
+      );
+  });
